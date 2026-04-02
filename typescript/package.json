@@ -1,0 +1,39 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Gilded Rose Kata",
+  "license": "ISC",
+  "main": "src/GildedRose.ts",
+  "directories": {
+    "test": "test"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "node"
+    ]
+  },
+  "scripts": {
+    "main": "npx tsx src/GildedRose.ts",
+    "test": "jest",
+    "verify-output": "jest VerifyOutput.test.ts"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
