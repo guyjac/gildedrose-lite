@@ -11,7 +11,7 @@ This project may be initialised by running the command
 
 ## Intro
 GildedRose is an inventory system that updates daily.
-It contains special items (Brie, Backstage Passes, Sulfuras, Conjured), and normal items (everything else).
+It contains special items (Brie, Backstage Passes, Sulfuras), and normal items (everything else).
 
 All Items contain the properties:
 `SellIn`: Represents the number of days left to sell an item.
@@ -49,6 +49,7 @@ The following unit tests may be useful:
 ## Running unit tests / Verifying the application output
 Unit tests can be run via your IDE, or by using the following command
 `mvn test -Dtest=UnitTests`
+
 
 You can verify any changes that you have made to the `GildedRose` class by running `VerifyOutput`.
 `mvn test -Dtest=VerifyOutput`
