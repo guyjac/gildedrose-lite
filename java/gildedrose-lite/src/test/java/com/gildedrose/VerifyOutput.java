@@ -1,11 +1,13 @@
 package com.gildedrose;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertLinesMatch;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -25,11 +27,13 @@ public class VerifyOutput {
             System.setOut(originalOut);
         }
 
-        // Load expected
-        String expected = Files.readString(Paths.get("src/test/resources/expected30days.txt"));
-        String actual = out.toString();
+        List<String> expectedLines =
+                Files.readAllLines(Paths.get("src/test/resources/expected30days.txt"));
 
-        assertEquals(expected.trim(), actual.trim());
+        List<String> actualLines =
+                Arrays.asList(out.toString().split("\\R"));
+
+        assertLinesMatch(expectedLines, actualLines);
     }
 
 }
