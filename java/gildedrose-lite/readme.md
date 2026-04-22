@@ -2,7 +2,7 @@
 
 # Prerequisites
 - Maven
-- Java 17 or higher
+- Java 21 or higher
 - An IDE such as Intelij or vscode
 
 # Setup
